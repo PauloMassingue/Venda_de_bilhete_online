@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+span{
+    color: #3c4fff;
+}
+header{
+
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    text-align: center ;
+}
+.cabecalho{
+    padding-top: 50px;
+}
+body {
+ 
+    background: #F6F9FF;
+    height: 100vh;
+    width: 100%;
+   
+    justify-content: center;
+    align-items: center;
+    color: #383737;
+    font-size: 16px;
+}
+
+main.cards {
+    position: absolute;
+    display: flex;
+    padding: 32px;
+    justify-content: center;
+    align-items: center;
+}
+
+main.cards section.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 9px;
+    max-height: 468px;
+    margin-left: 32px;
+}
+
+main.cards section.card:first-child {
+    margin-left: 0;
+}
+
+main.cards section.card .icon {
+    width: 64px;
+    height: 64px;
+}
+
+main.cards section.card img {
+    width: 100%;
+}
+
+main.cards section.card h3 {
+    font-size: 100%;
+    margin: 16px 0;
+}
+
+main.cards section.card span {
+    font-weight: 300;
+    *max-width: 240px;
+    height: 70px;
+    width: 300px;
+    font-size: 80%;
+    margin-bottom: 16px;
+}
+
+main.cards section.card button {
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border-radius: 32px;
+    border: 0;
+    cursor: pointer;
+    font-size: 80%;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 16px 0;
+}
+
+main.cards section.card.pessoal button {
+    background: linear-gradient(to right, #ffbd66, #3c4fff);
+}
+main.cards section.card.empresa button {
+    background: linear-gradient(to right, #ffbd66,#3c4fff);
+}
+
+
+main.cards section.card.pessoal {
+    box-shadow: 20px 20px 50px -30px #DBC4FF;
+}
+main.cards section.card.empresa {
+    box-shadow: 20px 20px 50px -30px #AFD6FF;
+}
+
+
+
+
+
+
+/* =================essa parte ser aresponsavel por abrir a janela para cadastro do anunciante =================*/
+
+
+
+
+
+.janela-modal{
+
+width: 100vw;
+height: 100vh;
+position: relative;
+top: 0;
+left: 0;
+background-color: #969493;
+z-index: 999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    main.cards {
+        flex-direction: column;
+    }
+
+    main.cards section.card {
+        margin-left: 0;
+        margin-bottom: 32px;
+    }
+
+    main.cards section.card:last-child {
+        margin-bottom: 0;
+    }}
+

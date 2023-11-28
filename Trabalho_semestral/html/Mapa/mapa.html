@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela Passageiro</title>
+    <link rel="stylesheet" href="./Leaflet/leaflet.css">
+	<script src="./Leaflet/leaflet.js"></script>
+    <link rel="stylesheet" href="./mapa.css">
+</head>
+<body>
+	<div id="map"></div>
+	<section id="dropdown" onmouseover="mostrarRotas()" onmouseout="ocultarRotas()">
+		<button id="alocar">Alocar veiculo</button>
+		<br>
+		<div id="droppy">
+			<button id="button-0" value="0">Maputo - Xai-Xai</button><br>
+			<button id="button-1" value="1">Maputo - Inhambane</button><br>
+			<button id="button-2" value="2">Quelimane - Nampula</button><br>
+		</div>
+	</section>
+	<div id="chave">
+		<section>
+			<div style="display: inline-block" class="cor" id="cor-1"></div>
+			<label>Maputo - Xai-Xai</label>
+		</section>
+		<section>
+			<div style="display: inline-block" class="cor" id="cor-2"></div>
+			<label>Maputo - Inhambane</label>
+		</section>	
+		<section>
+			<div style="display: inline-block" class="cor" id="cor-3"></div>
+			<label>Quelimane - Nampula</label>
+		</section>	
+<!--		<section>
+			<div style="display: inline-block" class="cor" id="cor-4"></div>
+			<label>Maputo - </label>
+		</section>	
+		<section>
+			<div style="display: inline-block" class="cor" id="cor-5"></div>
+			<label>Maputo - </label>
+		</section>	
+		<section>
+			<div style="display: inline-block" class="cor" id="cor-6"></div>
+			<label>Maputo - </label>
+		</section>	-->
+	</div>
+	<div id="escolha">
+		Escolher Transporte:
+		<br>	
+			<button style="display: none" class="escolhas" id="escolha-0" value="0">Autocarro 1</button>
+			<button style="display: none" class="escolhas" id="escolha-1" value="1">Autocarro 2</button>
+			<button style="display: none" class="escolhas" id="escolha-2" value="2">Autocarro 3</button>
+			<button style="display: none" class="escolhas" id="escolha-3" value="3">Autocarro 4</button>
+			<button style="display: none" class="escolhas" id="escolha-4" value="4">Autocarro 5</button>
+			<button style="display: none" class="escolhas" id="escolha-5" value="5">Autocarro 6</button>
+			<button style="display: none" class="escolhas" id="escolha-6" value="6">Autocarro 7</button>
+			<button style="display: none" class="escolhas" id="escolha-7" value="7">Autocarro 8</button>
+			<button style="display: none" class="escolhas" id="escolha-8" value="8">Autocarro 3</button>
+			<button style="display: none" class="escolhas" id="escolha-9" value="9">Autocarro 10</button>
+			<button style="display: none" class="escolhas" id="escolha-10" value="10">Autocarro 11</button>
+	</div>
+	<div id="detalhess">
+		<section>
+		<label class="detalhes" id="detalhe-0">Rota: </label>
+		<input class="info" id="info-0">		
+		</section>
+		<section>
+			<label class="detalhes" id="detalhe-1">Preco:</label>
+			<input class="info" id="info-1">
+		</section>
+		<section>
+			<label class="detalhes" id="detalhe-2">Lotacao</label>
+			<input class="info" id="info-2">
+		</section>
+	</div>
+	<script src="./mapa.js"></script>
+</body>
+</html>

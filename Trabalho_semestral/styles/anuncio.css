@@ -1,0 +1,358 @@
+:root{
+
+    --main-color: #3c4fff;
+    --secundary-color:#3c4fff;
+    --lighter-color: #B0B01
+    --light-color: #b0b0c0;
+    --dark-color:#52505e;
+
+}
+*margin{
+    margin: 0;
+    padding: 0;
+}
+
+*,::before,::after{
+
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-size: 16px;
+    font-weight: 400;
+line-height: 1.8;
+color:var(--dark-color);
+*background: var(--dark-color);}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    list-style: none;
+}
+h1,h2,h3{
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0 0 0.5em;
+}
+p{
+
+}
+
+img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+form .estado {
+	
+	display: flex;
+    flex-wrap: wrap;
+	*justify-content: center;
+	*align-items: center;
+	padding: 10px;
+}
+
+
+
+
+
+
+
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0.2em;
+}
+
+.form-box{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5em;
+    border-radius:15px ;
+    *border: 1px solid var(--main-color);
+    background-color: #faf9ff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  
+}
+
+
+
+/* Parte do progress bar  */
+
+.form-box .progress{
+    position: relative;
+    padding: 1rem;
+}
+
+
+/* =======Steps do progresso======== */
+
+.progress ul.progress-steps {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+
+.progress ul.progress-steps li{
+
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom:2em ;
+}
+
+.progress ul.progress-steps li >span{
+
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1em;
+    border-radius: 50%;
+    background-color: var(--dark-color);
+    color: aliceblue;
+}
+
+.progress ul.progress-steps li.active >span{
+
+    color: white;
+    background-color: var(--main-color);
+    border: 4px solid var(--main-color);
+    z-index: 1;
+}
+
+.progress ul.progress-steps li p span{
+    color: var(--dark-color);
+    display: none;
+    
+}
+
+.progress ul li p {
+    position: absolute;
+    top: -2em;
+    
+    font-size: 12px;
+}
+
+
+
+/* ========= Transicao de forms========= */
+
+.form-box form{
+    width: 100%;
+    padding: 3em 1em;
+    background-color: white;
+    border-radius: 30px 30px 15px 15px;
+}
+
+form > div{
+    max-width: 400px;
+    margin: 0 auto;
+}
+form > div p{
+    color:#82818b;
+    margin: 2em;
+}
+
+
+/* ========= Separacao entre componentes========== */
+form > div >div:not(.chekbox){
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+
+
+
+/* ======= Costumisacao de campos de textos  */
+
+form :where(input,select){
+    height: 40px;
+    padding: 0 1em;
+    border-radius: 7px;
+    outline-color: gray;
+    border: 1px solid gray;
+    background-color: transparent;
+}
+
+form label {
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+/* ======== Data de nascimento ========= */
+form .grouping{
+    padding-left: 0px;
+    display: flex;
+}
+
+
+
+
+form .grouping:hover {
+    background-color: mix(#fff, var(--main-color), 84%);
+}
+
+form .grouping input{
+   
+    
+    max-width: 70px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+form .checkbox input{
+    height: auto;
+}
+
+
+
+form > div:not(.btn-group){
+    display: none;
+    -webkit-animation: fadeIn .6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+        transform: translateY(10%);
+    }
+    0%{
+        opacity: 0;
+        transform: translateY(10%);
+    }
+}
+form > div.active{
+    display: block;
+}
+
+
+
+
+
+
+/* ======== desabilitamos outras telas e deixamos o primeiro step */
+.form-two, .form-tree { display: none;}
+
+.btn-group{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-top:2em ;
+}
+
+/* ======estilizando botoes ======= */
+.btn-group [class*="btn-"]{
+    background-color: var(--main-color);
+    color: white;
+    padding: 1em 2.5em;
+    border: 2px solid #999696;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color .3s, border-color .3s ease-out;
+}
+
+
+.btn-group [class*="btn-"]:disabled{
+
+    background-color: #82818b;
+    border-color:#363333 ;
+    
+
+}
+
+
+
+/* ========================card do ultimo form=================== */
+
+
+
+
+
+.boximage{
+    
+}
+
+
+#preview-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  #preview-container img {
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 5px;
+  }
+  
+
+
+
+
+
+@media screen and (min-width:768px){
+    .form-box{
+        flex-direction: row;
+    }
+
+.form-box .progress{
+
+    flex:  1 0 35%;
+    min-width: 300px;
+    padding: 3em;
+}
+.progress ul.progress-steps{
+    flex-direction: column;
+    gap: 0;
+}
+.progress ul.progress-steps li:not(:last-child)::before{
+content: '';
+position: absolute;
+left: 20px;
+top: 30px;
+width: 2px;
+height: 95px;
+background-color: #82818b;
+}
+.form-box form{
+    padding: 3em;
+    border-radius: 0 15px 15px 0;
+}
+.progress ul li p {
+    position: relative;
+    top: auto;
+    font-size: inherit;
+}
+.progress ul.progress-steps li p span{
+    display: block;
+}
+}

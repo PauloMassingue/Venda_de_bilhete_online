@@ -1,0 +1,169 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'inter', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    border: none;
+    outline: none;
+}
+:root{
+    --bg-color:#191919;
+    --secont-bg-color:#101010;
+    --main-color:#e9204f;
+    --text-color:#fff;
+    --second-color:#e4e4e4;
+    --other-color:#c6c9d8bf;
+
+    --h1-font:7rem;
+    --h2-font:3.5rem;
+    --p-font:1.1rem;
+}
+
+body{
+    color: var(--text-color);
+    background: var(--second-color) ;
+}
+
+
+
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 28px 11%;
+    border-bottom: 1px solid transparent;
+    transition: all ease .50s;
+}
+
+
+
+
+
+
+.logo img{
+    width: 70px;
+    justify-content: right;
+}
+.navlist{
+    display: flex;
+    justify-content: space-around;
+}
+.navlist a{
+
+    color: var(--main-color);
+    font-size: var(--p-font);
+    font-weight: 600;
+    margin: 0 40px;
+    transition: all ease .40s;
+}
+.navlist a:hover{
+    color: var(--main-color);
+}
+#menu-icon{
+    font-size: 42px;
+    color: var(--text-color);
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* parte da respsnsividade do site */
+
+@media(max-width: 1600px){
+
+    header{
+        padding: 14px 4%;
+    
+    }
+    header.sticky{
+        padding: 8px 4%;
+    }
+    ::selection{
+        padding: 100px 5% 80px;
+    }
+    
+    }
+
+    @media(max-width: 1600px){
+        .home{min-height: 90vh;
+        }
+        .navlist a {
+            margin: 0 20px;
+        }
+        :root{
+            --h1-font:5rem;
+            --h2-font:3.15rem;
+            --p-font:1rem;
+        }
+    }
+    
+    @media(max-width: 1060px){
+
+        .about{
+            grid-template-columns: 1fr;
+        }
+        .about-img{
+            text-align: center;
+            order:2;
+        }
+        .about-img img{
+            max-width: 100%;
+            width: 600px;
+            height: auto;
+        }
+        .item-servico{
+            grid-template-columns: repeat(auto-fit,minmax(350px,auto));
+        }
+        
+    }
+    
+    @media(max-width: 870px){
+        #menu-icon{
+            display: block;
+        }
+        .navlist{
+            position: absolute;
+            top: -800px;
+            right: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            background: #000;
+            padding: 20px 0;
+            text-align: left;
+            transition: all .50s ease;
+
+        }
+        .navlist a{
+            display: block;
+            font-size: 22px;
+            padding: 12px 0;
+
+        }
+        .navlist.open{
+
+            top: 100%;
+        }
+    }

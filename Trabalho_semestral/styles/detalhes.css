@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+* {
+    
+}
+
+main {
+    max-width: 1000px;
+    margin: 0px;    
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+}
+
+#container-principal {
+    width: 1oopx;
+    max-width: 2000vh;
+    position: relative;
+    margin: 0px;
+    margin-bottom: 15px;
+}
+
+.botoes {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    
+    padding: 25px 15px;
+    background-position: center;
+    background-size: 40px;
+    cursor: pointer;
+    transition: .3s ease-in;    
+}
+
+.botoes:hover {
+    background-color: rgba(0, 0, 0, 0.568);
+}
+
+#container-principal:hover > .botoes {
+    display: inline-block;
+}
+
+#btn-anterior {
+    background-image: url('../imagens/icones/icons8_chevron_left_100px.png'); 
+    border-radius: 0px 3px 3px 0px;   
+}
+
+#btn-proximo {
+    background-image: url('../imagens/icones/icons8_chevron_right_100px.png');
+    border-radius: 3px 0px 0px 3px;
+    right: 0%;
+}
+
+img {
+    width: 100%;
+}
+
+#legenda {
+    position: absolute;
+    bottom: 4%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    font-weight: bold;
+    color: rgb(224, 224, 224);
+}
+
+#container-circulos {
+    text-align: center;
+}
+
+.circulos {    
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 3px;
+    background-color: rgb(193, 193, 193);
+    border-radius: 50%;    
+    cursor: pointer;
+}
+
+.activo {
+    background-color: gray;
+    transition: .6s ease-in;
+}

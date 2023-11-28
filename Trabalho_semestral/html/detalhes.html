@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Carossel</title>
+        <link rel="stylesheet" href="../styles/detalhes.css">
+    </head>
+
+    <body>
+        <main>
+            <div id="container-principal">
+                <section id="container-imagens">
+                    <img src="../img/img-1.jpg" class="imagens">
+                    <img src="../img/img-2.jpg" class="imagens">
+                    <img src="../img/img-3.jpg" class="imagens">
+                    <img src="../img/img-4.jpg" class="imagens">
+                </section>
+                <span class="botoes" id="btn-anterior" onclick="plusSlides(-1)">
+                </span>
+                <span class="botoes" id="btn-proximo" onclick="plusSlides(1)">
+                </span>
+                <section id="legenda">Exemplo de legenda</section>
+            </div>
+            <div id="container-circulos">
+                <a id="circ1" class="circulos" onclick="curentSlide(0)"></a>
+                <a id="circ2" class="circulos" onclick="curentSlide(1)"></a>
+                <a id="circ3" class="circulos" onclick="curentSlide(2)"></a>
+                <a id="circ4" class="circulos" onclick="curentSlide(3)"></a>
+            </div>
+        </main>
+
+        <script>
+            let cslide = 0
+            showSlide(cslide)
+
+            function plusSlides(n) {
+                showSlide(cslide += n)
+            }
+
+            function curentSlide(n) {
+                showSlide(cslide = n)
+            }
+
+            function showSlide(n) {
+                let slides = document.getElementsByClassName('imagens')
+                let circles = document.getElementsByClassName('circulos')
+                let i
+                if(n > slides.length-1) {
+                    cslide = 0
+                }
+                if(n < 0) {
+                    cslide = slides.length-1
+                }
+                for(i = 0; i < slides.length; i++) {
+                    slides[i].style.display = 'none'
+                }
+                for(i = 0; i < circles.length; i++) {
+                    circles[i].className = circles[i].className.replace(" activo", "")
+                }
+                slides[cslide].style.display = 'block'
+                circles[cslide].className += " activo"
+            }
+        </script>
+    </body>
+
+</html>

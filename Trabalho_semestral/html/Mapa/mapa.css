@@ -1,0 +1,89 @@
+#map {
+	position: absolute;
+	z-index: -1;
+	top: -1%;
+	height: 102vh;
+	width: 100vw;
+}
+
+#chave {
+	background: none;
+	border: 2px black solid;
+	width: 190px;
+	height: 120px;
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	padding: 10px;
+}
+
+section {
+	margin-top: 10px;
+}
+
+.cor {
+	width: 20px;
+	height: 20px;
+}
+
+#cor-1 {
+	background: green;
+}
+
+#cor-2 {
+	background: blue;
+}
+
+#cor-3 {
+	background: purple;
+}
+
+#cor-4 {
+	background: orange;
+}
+
+#cor-5 {
+	background: red;
+}
+
+#cor-6 {
+	background: purple;
+}
+
+#dropdown {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 160px;
+	height: 60px;
+}
+
+.escolhas {
+	background: none;
+}
+
+#escolha {
+	position: fixed;
+	top: 0px;
+	left: 100px;
+	width: 100px;
+	background: none;
+	border: 2px solid black;
+	padding: 8px;
+}
+
+#detalhess {
+	width: 200px;
+	height: 180px;
+	background: none;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	border: 2px solid black;
+	padding: 7px;
+}
+
+.info {
+	width: 170px;
+	background: none;
+}
